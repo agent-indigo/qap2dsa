@@ -30,7 +30,7 @@ public class D1array {
     }
     public boolean search(int query) {
         for (int i = 0; i < d1array.length; i++) if (d1array[i] == query) {
-            System.out.printf("Position: %d", d1array[i]);
+            System.out.printf("Position: %d", i);
             this.success = true;
         } else {
             System.err.println("Not found.");

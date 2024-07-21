@@ -1,6 +1,6 @@
 package com.keyin.hynes.braden.qap2dsa.classes;
 import com.keyin.hynes.braden.qap2dsa.enums.SeatStatus;
-public class Seat {
+public final class Seat {
     private SeatStatus status;
     public Seat(SeatStatus status) {
         this.status = status;

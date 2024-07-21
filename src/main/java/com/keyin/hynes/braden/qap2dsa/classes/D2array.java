@@ -1,6 +1,6 @@
 package com.keyin.hynes.braden.qap2dsa.classes;
 import com.keyin.hynes.braden.qap2dsa.interfaces.Retrieve;
-public class D2array<T> implements Retrieve<T> {
+public final class D2array<T> implements Retrieve<T> {
     private Object[][] d2array;
     private boolean success;
     private Object value;

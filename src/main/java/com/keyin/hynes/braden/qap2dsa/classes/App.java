@@ -1,6 +1,6 @@
 package com.keyin.hynes.braden.qap2dsa.classes;
 import java.util.Scanner;;
-public class App {
+public final class App {
     private D2array<Integer> seats;
     private int row;
     private int column;
@@ -26,7 +26,7 @@ public class App {
             if (app.scanner != null) app.scanner.close();
         }
     }
-    public void mainMenu() {
+    private void mainMenu() {
         while (selection != 3) {
             System.out.println("\nMain Menu\n");
             System.out.println("1: Display seating chart");
@@ -57,7 +57,7 @@ public class App {
             }
         }
     }
-    public void reserveSeat() {
+    private void reserveSeat() {
         while (row == Integer.MIN_VALUE | column == Integer.MIN_VALUE) {
             System.out.println("\nReserve Seat\n");
             System.out.println("\nEnter row:\n");

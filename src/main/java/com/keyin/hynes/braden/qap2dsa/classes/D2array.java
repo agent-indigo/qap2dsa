@@ -34,7 +34,7 @@ public final class D2array<T> implements Retrieve<T> {
     }
     @Override
     public void list() {
-        for (int row = 0; row < d2array.length; row++) for (int col = 0; col < d2array[0].length; col++) System.out.printf("%d\n", d2array[row][col]);
+        for (int row = 0; row < d2array.length; row++) for (int col = 0; col < d2array[0].length; col++) System.out.println(d2array[row][col].toString());
     }
     @Override
     public boolean search(T query) {

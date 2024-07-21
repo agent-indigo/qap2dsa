@@ -28,7 +28,7 @@ public final class D1array<T> implements Retrieve<T> {
     }
     @Override
     public void list() {
-        for (int i = 0; i < d1array.length; i++) System.out.printf("%d\n", d1array[i]);
+        for (int i = 0; i < d1array.length; i++) System.out.println(d1array[i].toString());
     }
     @Override
     public boolean search(T query) {

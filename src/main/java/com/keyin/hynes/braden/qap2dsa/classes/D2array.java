@@ -17,7 +17,7 @@ public final class D2array<T> implements Retrieve<T> {
     public boolean add(
         int row,
         int col,
-        int value
+        T value
     ) {
         try {
             if (d2array[row][col] == null) {

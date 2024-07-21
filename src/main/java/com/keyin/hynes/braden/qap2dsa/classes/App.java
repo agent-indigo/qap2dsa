@@ -1,7 +1,9 @@
 package com.keyin.hynes.braden.qap2dsa.classes;
-import java.util.Scanner;;
+import com.keyin.hynes.braden.qap2dsa.enums.SeatStatus;
+import java.util.Scanner;
 public final class App {
-    private D2array<Integer> seats;
+    private Seat seat;
+    private D2array<Seat> seats;
     private int row;
     private int column;
     private int selection;
@@ -9,7 +11,8 @@ public final class App {
     private String invalidInputMessage;
     private Scanner scanner;
     private App() {
-        this.seats = new D2array<Integer>(12, 12);
+        this.seat = new Seat(SeatStatus.available);
+        this.seats = new D2array<Seat>(12, 12);
         this.selection = 0;
         this.selectionPromptMessage = "\nEnter selection:\n";
         this.invalidInputMessage = "\nInvalid input.\n";
@@ -64,7 +67,8 @@ public final class App {
             this.row = Integer.parseInt(scanner.nextLine());
             System.out.println("\nEnter column:\n");
             this.column = Integer.parseInt(scanner.nextLine());
-            if (seats.add(row, column, 1)) {
+            seat.setStatus(SeatStatus.reserved);
+            if (seats.add(row, column, seat)) {
                 System.out.println("Seat successfully reserved.");
             } else {
                 System.err.println("Seat already reserved.");

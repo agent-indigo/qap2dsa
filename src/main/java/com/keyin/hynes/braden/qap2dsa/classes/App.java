@@ -1,7 +1,7 @@
 package com.keyin.hynes.braden.qap2dsa.classes;
 import java.util.Scanner;;
 public class App {
-    private D2array seats;
+    private D2array<Integer> seats;
     private int row;
     private int column;
     private int selection;
@@ -9,7 +9,7 @@ public class App {
     private String invalidInputMessage;
     private Scanner scanner;
     private App() {
-        this.seats = new D2array(12, 12);
+        this.seats = new D2array<Integer>(12, 12);
         this.selection = 0;
         this.selectionPromptMessage = "\nEnter selection:\n";
         this.invalidInputMessage = "\nInvalid input.\n";
@@ -45,7 +45,6 @@ public class App {
                         reserveSeat();
                         break;
                     } case 3: {
-                        this.selection = 0;
                         System.exit(0);
                     } default: {
                         this.selection = 0;
